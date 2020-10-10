@@ -20,7 +20,10 @@ public class main {
         System.out.print("Number of elements in Array: ");
         int x = sc.nextInt();
         LinearSearch ls = new LinearSearch(x);
-        int result = ls.search(50);
+        
+        System.out.println("Search Element: ");
+        int target = sc.nextInt();
+        int result = ls.search(target);
         //int result = ls.LinearSearch(list,50);
         System.out.println("Element found in Index "+result);
         
