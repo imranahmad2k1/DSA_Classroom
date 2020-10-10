@@ -24,8 +24,9 @@ public class main {
         System.out.println("Search Element: ");
         int target = sc.nextInt();
         int result = ls.search(target);
-        //int result = ls.LinearSearch(list,50);
-        System.out.println("Element found in Index "+result);
+        int count = ls.searchInstances(target);
+        System.out.println("Total Instances: "+count);
+        System.out.println("First instance found in Index: "+result);
         
     }
     

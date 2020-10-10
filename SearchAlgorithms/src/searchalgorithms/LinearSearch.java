@@ -34,4 +34,13 @@ public class LinearSearch {
         }
         return result;
     }
+    public int searchInstances(int x){
+        int count=0;
+        for(int i=0;i<list.length;++i){
+            if (list[i] == x){
+                count += 1;
+            }
+        }
+        return count;
+    }
 }
