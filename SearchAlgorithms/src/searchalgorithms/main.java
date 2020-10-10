@@ -21,12 +21,11 @@ public class main {
         int x = sc.nextInt();
         LinearSearch ls = new LinearSearch(x);
         
-        System.out.println("Search Element: ");
+        System.out.print("Search Element: ");
         int target = sc.nextInt();
-        int result = ls.search(target);
         int count = ls.searchInstances(target);
         System.out.println("Total Instances: "+count);
-        System.out.println("First instance found in Index: "+result);
+        ls.search(target);
         
     }
     

@@ -12,6 +12,8 @@ import java.util.Random;
  */
 public class LinearSearch {
     int list[];
+    int indexes[];
+    int count;
     public LinearSearch(int x){
         Random rand = new Random();
         list=new int[x];
@@ -21,21 +23,30 @@ public class LinearSearch {
             System.out.println(x);
         }
     }
-    public int search(int x){
+    public void search(int x){
         int result=-1;
+        int ind=0;
+        indexes=new int[count];
         for(int i=0;i<list.length;++i){
             if (list[i] == x){
-                result = i;
-                break;
+                indexes[ind]=i;
+                ind+=1;
             }
             else{
                 result = -1;
             }
         }
-        return result;
+        if(indexes.length>0){
+            for(int i =0;i<indexes.length;++i){
+                System.out.println("Instance " + (i+1) + " found at Index: "+indexes[i]);
+            }
+        }
+        else{
+            System.out.println("-1");
+        }
     }
     public int searchInstances(int x){
-        int count=0;
+        count=0;
         for(int i=0;i<list.length;++i){
             if (list[i] == x){
                 count += 1;
