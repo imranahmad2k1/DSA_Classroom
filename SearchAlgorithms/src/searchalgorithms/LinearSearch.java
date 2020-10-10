@@ -20,20 +20,17 @@ public class LinearSearch {
         for(int i=0;i<list.length;++i){
             x = rand.nextInt(100);
             list[i] = x;
-            System.out.println(x);
+            System.out.print(x + " ");
         }
+        System.out.println("");
     }
     public void search(int x){
-        int result=-1;
         int ind=0;
         indexes=new int[count];
         for(int i=0;i<list.length;++i){
             if (list[i] == x){
                 indexes[ind]=i;
                 ind+=1;
-            }
-            else{
-                result = -1;
             }
         }
         if(indexes.length>0){
