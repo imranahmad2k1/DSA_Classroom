@@ -17,10 +17,12 @@ public class SortingAlgos
         
         for(int i=0;i<bList.length-1;i++){
             for(int j=0;j<bList.length-(i+1);j++){
+                bComp++;
                 if(bList[j]>bList[j+1]){
                     temp = bList[j];
                     bList[j]=bList[j+1];
                     bList[j+1]=temp;
+                    bSwap++;
                 }
             }
         }
