@@ -1,6 +1,7 @@
 package sortingapp;
 import java.util.Scanner;
 
+
 public class SortingApp 
 {
 
@@ -14,16 +15,18 @@ public class SortingApp
         int size = input.nextInt();
         int mstrList[];
         int bblList[];
+        int ssList[];
                 
         //Create a Master List
         mstrList = new int[size];
         bblList = new int[size];
-        
+        ssList = new int[size];
         
         for(int i=0; i<size; i++)
         {
             mstrList[i] = (int)(Math.random()*100);
             bblList[i] = mstrList[i];
+            ssList[i] = mstrList[i];
         }
         
         char choice;            
@@ -54,9 +57,11 @@ public class SortingApp
             else if(choice == 'S' || choice == 's')
             {
                 System.out.println("\n------------------------------------");
-                
-                System.out.println("\nSELECTION SORT IS NOT IMPLEMENTED YET");
-                
+                System.out.print("\nList Before Sort : ");
+                sort.PrintList(ssList);
+                sort.SelectionSort(ssList);
+                System.out.print("\nList After  Sort : ");
+                sort.PrintList(ssList);
                 System.out.println("\n------------------------------------");
             }
             else if(choice == 'I' || choice == 'i')
