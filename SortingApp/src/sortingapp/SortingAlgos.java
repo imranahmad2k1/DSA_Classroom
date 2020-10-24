@@ -1,5 +1,4 @@
 package sortingapp;
-import java.util.concurrent.TimeUnit;
 
 public class SortingAlgos 
 {
@@ -10,6 +9,8 @@ public class SortingAlgos
     private int temp;
     private int min;
     private int ind;
+    private double btimeElapsed;
+    private double stimeElapsed;
     
     void SortingAlgos()
     {
@@ -34,11 +35,12 @@ public class SortingAlgos
             sSwap++;
         }
         long s_endTime =  System.nanoTime();
-        long timeElapsed = s_endTime - s_startTime;
+        double time = s_endTime - s_startTime;
+        stimeElapsed = time/1000000000;
     }
     public void BubbleSort(int bList[])
     {
-        
+        long startTime =  System.nanoTime();
         for(int i=0;i<bList.length-1;i++){
             for(int j=0;j<bList.length-(i+1);j++){
                 bComp++;
@@ -50,7 +52,9 @@ public class SortingAlgos
                 }
             }
         }
-    
+    long endTime =  System.nanoTime();
+    double time = endTime - startTime;
+    btimeElapsed = time/1000000000;
     
     }
     
@@ -70,8 +74,12 @@ public class SortingAlgos
         System.out.println("----------------------------------");
         System.out.println("Bubble Sort Comparisons    : "+bComp);
         System.out.println("Bubble Swaps Swaps         : "+bSwap);
+        String bformat = String.format("Selection Sort Time:        %.2eseconds",btimeElapsed);
+        System.out.println(bformat);
         System.out.println("Selection Sort Comparisons    : "+sComp);
         System.out.println("Selection Sort Swaps         : "+sSwap);
+        String sformat = String.format("Selection Sort Time:        %.2eseconds",stimeElapsed);
+        System.out.println(sformat);
         
     }
     
