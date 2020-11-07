@@ -18,10 +18,11 @@ public class RecursionPractice {
             System.out.println("\t3. Fibonacci Series");
             System.out.println("\t4. Triangular Series");
             System.out.println("\t5. Sum of Squares");
-	    System.out.println("\t6. Factorial ");		
+	    System.out.println("\t6. Factorial ");
+            System.out.println("\t7. Linear Sum");
             System.out.println("\t0. Exit Programe");
             System.out.println("------------------------------------");
-            System.out.print("Enter Your Choice (0/1/2/3/4/5/6) : ");
+            System.out.print("Enter Your Choice (0/1/2/3/4/5/6/7) : ");
             
             choice =  input.nextInt();
             
@@ -101,18 +102,32 @@ public class RecursionPractice {
             }
 	    else if(choice == 6)
             {
-		
                 System.out.println("\n------------------------------------");
                 System.out.print("Enter Number to Find its Factorial : ");
                 int N = input.nextInt();
                 System.out.print("The Factorial of "+N+" :");
                 int Fact = recObj.Factorial(N);
                 System.out.println(Fact);
-                System.out.println("\n------------------------------------");
-		
-
-                
+                System.out.println("\n------------------------------------");  
             }
+            
+	    else if(choice == 7)
+            {
+                System.out.println("\n------------------------------------");
+                System.out.print("Enter Number of Elements in Array : ");
+                int N = input.nextInt();
+                int A[] = new int[N];
+                for(int i=0; i<N; ++i){
+                    int no;
+                    System.out.print("Enter number at position "+(i+1) + ": ");
+                    no = input.nextInt();
+                    A[i] = no;
+                }
+                int sum = recObj.LinearSum(A, A.length);
+                System.out.println("\nThe Sum of Array is: " + sum);
+                System.out.println("\n------------------------------------");  
+            }
+            
             else if(choice == 0)
             {
                 System.out.println("\n--------------------------------");
