@@ -20,9 +20,10 @@ public class RecursionPractice {
             System.out.println("\t5. Sum of Squares");
 	    System.out.println("\t6. Factorial ");
             System.out.println("\t7. Linear Sum");
+            System.out.println("\t8. Reverse List");
             System.out.println("\t0. Exit Programe");
             System.out.println("------------------------------------");
-            System.out.print("Enter Your Choice (0/1/2/3/4/5/6/7) : ");
+            System.out.print("Enter Your Choice (0/1/2/3/4/5/6/7/8) : ");
             
             choice =  input.nextInt();
             
@@ -125,6 +126,32 @@ public class RecursionPractice {
                 }
                 int sum = recObj.LinearSum(A, A.length);
                 System.out.println("\nThe Sum of Array is: " + sum);
+                System.out.println("\n------------------------------------");  
+            }
+            
+	    else if(choice == 8)
+            {
+                System.out.println("\n------------------------------------");
+                System.out.print("Enter Number of Elements in Array : ");
+                int N = input.nextInt();
+                int A[] = new int[N];
+                for(int i=0; i<N; ++i){
+                    int no;
+                    System.out.print("Enter number at position "+(i+1) + ": ");
+                    no = input.nextInt();
+                    A[i] = no;
+                }
+                
+                System.out.println("Array Before:");
+                for(int i: A){
+                    System.out.print(i + " ");
+                }
+                recObj.ReverseList(A,0,A.length-1);
+                
+                System.out.println("\nArray After");
+                for(int i:A){
+                    System.out.print(i + " ");
+                }
                 System.out.println("\n------------------------------------");  
             }
             

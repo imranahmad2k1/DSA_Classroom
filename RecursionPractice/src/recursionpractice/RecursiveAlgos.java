@@ -15,6 +15,16 @@ public class RecursiveAlgos {
         else{
             return A[N-1] + LinearSum(A, N-1);
         }
-        
+    }
+    void ReverseList(int A[],int i,int j){
+        int temp;
+        if (i<j){
+            temp = A[i];
+            A[i] = A[j];
+            A[j] = temp;
+            ++i;
+            --j;
+            ReverseList(A,i,j);
+        }
     }
 }
