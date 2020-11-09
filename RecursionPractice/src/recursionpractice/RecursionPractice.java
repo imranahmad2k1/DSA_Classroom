@@ -49,18 +49,14 @@ public class RecursionPractice {
             }
             else if(choice == 2)
             {
-		/*
                 System.out.println("\n------------------------------------");
                 System.out.print("\nEnter Number for Fib Term : ");
                 int F = input.nextInt();
                 int Term = recObj.Fibonacci(F);
                 System.out.print("\nThe "+F+"th Term of Fibonacci Seireis is "+Term);
-                */
-		System.out.println("Not Yet Implemented");
             }
             else if(choice == 3)
             {
-		/*
                 System.out.println("\n------------------------------------");
                 System.out.print("\nEnter Number of Fib Terms : ");
                 int N = input.nextInt();
@@ -72,9 +68,6 @@ public class RecursionPractice {
                 }
                 System.out.println();
                 System.out.println("\n------------------------------------");
-		*/
-		System.out.println("Not Yet Implemented");
-                
             }
             else if(choice == 4)
             {

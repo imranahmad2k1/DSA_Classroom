@@ -41,4 +41,12 @@ public class RecursiveAlgos {
             return EuGCD(B,R);
         }
     }
+    int Fibonacci(int F){
+        if(F<=1){
+            return F;
+        }
+        else{
+            return Fibonacci(F-1)+Fibonacci(F-2);                        
+        }
+    }
 }
