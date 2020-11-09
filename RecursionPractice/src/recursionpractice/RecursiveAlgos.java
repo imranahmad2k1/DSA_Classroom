@@ -89,4 +89,13 @@ public class RecursiveAlgos {
             return BinarySearch(key,A,((LI+HI)/2)+1,HI);
         }
     }
+    
+    int NumPower(int n, int p){
+        if(p==1){
+            return n;
+        }
+        else{
+            return n * NumPower(n,p-1);
+        }
+    }
 }
