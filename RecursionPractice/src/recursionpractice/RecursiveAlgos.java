@@ -74,4 +74,19 @@ public class RecursiveAlgos {
             return BinarySum(A,i,j/2) + BinarySum(A,i+(j/2),j/2);
         }
     }
+    
+    int BinarySearch(int key, int A[], int LI, int HI){
+        if (LI>HI){
+            return -1;
+        }
+        if (key == A[(LI+HI)/2]){
+            return (LI+HI)/2;
+        }
+        else if(key<(LI+HI)/2){
+            return BinarySearch(key, A, LI, ((LI+HI)/2)-1);
+        }
+        else{
+            return BinarySearch(key,A,((LI+HI)/2)+1,HI);
+        }
+    }
 }
