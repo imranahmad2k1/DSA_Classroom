@@ -29,15 +29,23 @@ public class RecursionPractice {
             
             if(choice == 1)
             {
-                /*System.out.println("\n------------------------------------");
-                System.out.print("\nEnter First Number ");
+                System.out.println("\n------------------------------------");
+                System.out.print("\nEnter First Number: ");
                 N1 = input.nextInt();
-                System.out.print("\nEnter Second Number ");
+                while(N1<1){
+                    System.out.println("Incorrect Format, please try entering a valid positive number");
+                    System.out.print("\nEnter First Number: ");
+                    N1 = input.nextInt();
+                }
+                System.out.print("\nEnter Second Number: ");
                 N2 = input.nextInt();
+                while(N2<1){
+                    System.out.println("Incorrect Format, please try entering a valid positive number");
+                    System.out.print("\nEnter Second Number: ");
+                    N2 = input.nextInt();
+                }
                 int GCD = recObj.EuGCD(N1, N2);
                 System.out.print("\nThe GCD of "+N1+" and "+N2+" : "+GCD);
-                */
-		System.out.println("Not Yet Implemented");
             }
             else if(choice == 2)
             {

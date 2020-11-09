@@ -27,4 +27,18 @@ public class RecursiveAlgos {
             ReverseList(A,i,j);
         }
     }
+    int EuGCD(int A,int B){
+        if (B>A){
+            int temp = A;
+            A = B;
+            B = temp;
+        }
+        int R = A%B;
+        if (R==0){
+            return B;
+        }
+        else{
+            return EuGCD(B,R);
+        }
+    }
 }
