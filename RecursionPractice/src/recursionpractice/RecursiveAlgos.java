@@ -65,4 +65,13 @@ public class RecursiveAlgos {
             return N*N+SquareSum(N-1);
         }
     }
+    
+    int BinarySum(int A[],int i,int j){
+        if(j==1){
+            return A[i];
+        }
+        else{
+            return BinarySum(A,i,j/2) + BinarySum(A,i+(j/2),j/2);
+        }
+    }
 }
