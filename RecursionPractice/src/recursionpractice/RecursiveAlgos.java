@@ -49,4 +49,20 @@ public class RecursiveAlgos {
             return Fibonacci(F-1)+Fibonacci(F-2);                        
         }
     }
+    int Triangular(int T){
+        if(T==1){
+            return 1;
+        }
+        else{
+            return T + Triangular(T-1);
+        }
+    }
+    int SquareSum(int N){
+        if(N==1){
+            return 1;
+        }
+        else{
+            return N*N+SquareSum(N-1);
+        }
+    }
 }

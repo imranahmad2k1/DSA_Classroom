@@ -71,8 +71,7 @@ public class RecursionPractice {
             }
             else if(choice == 4)
             {
-		/*
-                System.out.println("\n------------------------------------");
+		System.out.println("\n------------------------------------");
                 System.out.print("Enter the Triangular Series Range : ");
                 int R = input.nextInt();
                 int Term = 0;
@@ -83,24 +82,17 @@ public class RecursionPractice {
                     System.out.print(Term+" ");
                 }
                 System.out.println();
-                System.out.println("\n------------------------------------");
-		*/
-		System.out.println("Not Yet Implemented");
-                
+                System.out.println("\n------------------------------------");     
             }
             else if(choice == 5)
             {
-		/*
                 System.out.println("\n------------------------------------");
                 System.out.print("Sum of Square Range: ");
                 int R = input.nextInt();
-                System.out.print("The Sum of First"+R+" integers:");
-                int SUM = recObj.SquarSum(R);
+                System.out.print("The Sum of Squares of First "+R+" Integers: ");
+                int SUM = recObj.SquareSum(R);
                 System.out.println(SUM);
-                System.out.println("\n------------------------------------");
-		*/
-		System.out.println("Not Yet Implemented");
-                
+                System.out.println("\n------------------------------------"); 
             }
 	    else if(choice == 6)
             {
