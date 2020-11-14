@@ -98,4 +98,25 @@ public class RecursiveAlgos {
             return n * NumPower(n,p-1);
         }
     }
+    
+    int sumofDigits(int n){
+        if(n==0){
+            return 0;
+        }
+        if(n%10==0){
+            return n;
+        }
+        else{
+            return n%10+sumofDigits(n/10);
+        }
+    }
+    
+//    int sumofDigitsbySir(int n){
+//        if(n<10){
+//            return n;
+//        }
+//        else{
+//            return n%10+sumofDigits(n/10);
+//        }
+//    }
 }
